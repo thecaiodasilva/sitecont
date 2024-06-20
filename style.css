@@ -1,10 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 
+/*.climate-crisis-<uniquifier> {
+    font-family: "Climate Crisis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "YEAR" 1979;
+  }
+*/
 body {
     margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #000, red, blue);
-}
+    min-height: 100vh;                 
+    background: #fff;
+    }
 
 nav {
     color: #fff;
@@ -114,18 +124,37 @@ nav .effect .circle::before {
 }
 
 h1{
-    font-family: 'Karla', sans-serif;
+    font-family: "Climate Crisis", sans-serif;
+    letter-spacing: 3px;
     font-size: 4em;
     color: #fff;
-    animation: drop;
-    animation-duration: 1.5s;
+    animation: move-bg 10s infinite linear;;
+    animation-duration: 7s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
+
+        --bg-size: 400%;
+        --color-one: hsl(15 90% 55%);
+        --color-two: hsl(40 95% 55%);
+        font-size: clamp(3rem, 25vmin, 8rem);
+        background: linear-gradient(
+                      90deg,
+                      var(--color-one),
+                      var(--color-two),
+                      var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+
+        color: transparent;
+        background-clip: text;
+      
+      
+      
 }
  
 p{
+    font-family: 'Karla', sans-serif;
     font-size: 2em;
-    color: #fff;
+    color: #000;
     animation: drop;
     animation-delay: 1.5s;
     animation-duration: 1.5s;
@@ -138,5 +167,9 @@ p{
     translate: 0 100%;}
 }
 
-
+@keyframes move-bg {
+        to {
+          background-position: var(--bg-size) 0;
+        }
+      }
 
