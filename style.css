@@ -7,7 +7,7 @@
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-      "YEAR" 1979;.
+      "YEAR" 1979;
   }
 */
 body {
@@ -29,7 +29,7 @@ nav {
     backdrop-filter: blur(10px); /* Blur behind the element */
     -webkit-backdrop-filter: blur(10px); /* Blur behind the element for Safari */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Border with lower opacity */
+    border: 0 solid rgba(255, 255, 255, 0.3); /* Border with lower opacity */
 }
 
 nav ul {
@@ -150,7 +150,14 @@ h1{
       
       
 }
- 
+.fotografia{
+    font-size: 5em;
+}
+
+.dev{
+
+    font-size: 3em;
+}
 p{
     font-family: 'Karla', sans-serif;
     font-size: 2em;
@@ -160,6 +167,33 @@ p{
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
+}
+
+strong {
+    animation: move-bg 10s infinite linear;;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+
+        --bg-size: 400%;
+        --color-one: hsl(248, 90%, 55%);
+        --color-two: hsl(217, 90%, 76%);
+        font-size: clamp(3.5rem, 25vmin, 3.5rem);
+        background: linear-gradient(
+                      90deg,
+                      var(--color-one),
+                      var(--color-two),
+                      var(--color-one)
+                    ) 0 0 / var(--bg-size) 100%;
+
+        color: transparent;
+        background-clip: text;
+}
+br{
+    letter-spacing: -10px;
+}
+h2{
+    font-size: 2.5em;
 }
 
 @keyframes drop {
