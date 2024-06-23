@@ -189,7 +189,7 @@ strong {
         --bg-size: 400%;
         --color-one: hsl(248, 90%, 55%);
         --color-two: hsl(217, 90%, 76%);
-        font-size: clamp(3.5rem, 25vmin, 3.5rem);
+        font-size: clamp(3.5rem, 25vmin, 2.5rem);
         background: linear-gradient(
                       90deg,
                       var(--color-one),
@@ -285,12 +285,19 @@ h2{
     color: #000;
   }
   
+  .social-media-button{
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
   .social-media-buttons a {
-    font-size: 4em;
+    font-size: 3em;
     padding: 10px;
     border-radius: 50%;
     position: relative; /* Required for background animation */
     overflow: hidden;
+    color: #000;
+    margin: 10px;
   }
   
   .social-media-buttons a i {
@@ -343,6 +350,8 @@ h2{
      
 
       .cssbuttons-io {
+        justify-items: center;
+        align-items: center;
         position: relative;
         font-family: inherit;
         font-weight: 500;
@@ -354,6 +363,8 @@ h2{
         background: linear-gradient(to right, #8e2de2, #4a00e0);
         color: ghostwhite;
         overflow: hidden;
+        margin: 10px;
+        z-index: -1;
       }
       
       .cssbuttons-io svg {
